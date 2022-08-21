@@ -3,7 +3,7 @@ package com.example.chocoboiler;
 public class ChocoBoiler {
     private boolean boiled;
     private boolean empty;
-    private static ChocoBoiler instance;
+    private static ChocoBoiler instance = new ChocoBoiler();
 
     private ChocoBoiler() {
         empty = true;
@@ -11,9 +11,6 @@ public class ChocoBoiler {
     }
 
     public static ChocoBoiler getInstance() {
-        if (instance == null) {
-            instance = new ChocoBoiler();
-        }
         return instance;
     }
 
