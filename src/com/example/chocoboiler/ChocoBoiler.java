@@ -12,7 +12,11 @@ public class ChocoBoiler {
 
     public synchronized static ChocoBoiler getInstance() {
         if (instance == null) {
-            instance = new ChocoBoiler();
+            synchronized (ChocoBoiler.class) {
+                if (instance == null) {
+                    instance = new ChocoBoiler();
+                }
+            }
         }
         return instance;
     }
