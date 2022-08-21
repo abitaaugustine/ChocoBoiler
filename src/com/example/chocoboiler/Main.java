@@ -2,7 +2,7 @@ package com.example.chocoboiler;
 
 public class Main {
     public static void main(String[] args) {
-        ChocoBoiler chocoBoiler = new ChocoBoiler();
+        ChocoBoiler chocoBoiler =  ChocoBoiler.getInstance();
         chocoBoiler.fill();
         chocoBoiler.boil();
         chocoBoiler.drain();
@@ -10,7 +10,7 @@ public class Main {
 
         System.out.println("\n\n");
 
-        ChocoBoiler chocoBoiler1 = new ChocoBoiler();
+        ChocoBoiler chocoBoiler1 = ChocoBoiler.getInstance();
         chocoBoiler1.fill();
         chocoBoiler1.boil();
         chocoBoiler1.drain();
